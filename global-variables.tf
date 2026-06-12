@@ -10,6 +10,25 @@ variable "tag_spec"{
     description = "This will be used in tags"
 }
 
+variable "environment"{
+    default = "prod"
+    type = string
+    description = "This will be used in tags"
+}
+
+
+variable "location"{
+    default = "canadacentral"
+    type = string
+    description = "This will be used in tags"
+}
+
+variable "subnet_name"{
+    default = "ak-subnet"
+    type = string
+    description = "This will be used in tags"
+}
+
 variable "subnet_address_prefixes"{
     default = ["10.0.1.0/24"]
     type = list(string)

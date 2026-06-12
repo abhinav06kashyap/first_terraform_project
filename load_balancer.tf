@@ -1,5 +1,5 @@
 resource "azurerm_public_ip" "ak-lb-public-ip" {
-  name = "ak-lb-public-ip-${local.sufix_for_resourse}"
+  name = "ak-lb-public-ip-${var.environment}"
   resource_group_name = azurerm_resource_group.abhinav_rg.name
   location = azurerm_resource_group.abhinav_rg.location
   allocation_method = "Static"
