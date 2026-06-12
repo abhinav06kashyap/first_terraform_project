@@ -3,7 +3,7 @@ resource "azurerm_linux_virtual_machine" "ak_linux_vm" {
   name                = "${each.key}-linux-vm-${local.sufix_for_resourse}"
   resource_group_name = azurerm_resource_group.abhinav_rg.name
   location            = azurerm_resource_group.abhinav_rg.location
-  size                = var.instance-type["test"]
+  size                = var.instance-type["dev"]
   admin_username      = "azureuser"
   network_interface_ids = [
     azurerm_network_interface.abhinav_web_nic[each.key].id,
